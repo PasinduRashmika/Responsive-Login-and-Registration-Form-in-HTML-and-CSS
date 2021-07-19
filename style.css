@@ -183,8 +183,30 @@ form .form-content label{
 form .form-content label:hover{
     text-decoration: underline;
 }
-form .form-content .login-text,
-form .form-content .login-text .sign-up-text{
+form .form-content .login-form .sign-up-text,
+form .form-content .signup-form .sign-up-text{
     text-align: center;
     margin-top: 25px;
+}
+.container #flip{
+    display: none;
+}
+
+@media(max-width: 730px){
+    .container .cover{
+        display: none;
+    }
+    .form-content .login-form,
+    .form-content .signup-form{
+    width: 100%;
+    }
+    .form-content .signup-form{
+        display: none;
+    }
+    .container #flip:checked ~ form .signup-form{
+        display: block;
+    }
+    .container #flip:checked ~ form .login-form{
+        display: none; 
+    }
 }
